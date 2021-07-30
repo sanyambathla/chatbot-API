@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--<script src="https://kit.fontawesome.com/5548f5ed00.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color: whitesmoke;">
+
+        <img src="data:image/webp;base64,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" width="124" height="45"
+            class="d-inline-block align-top" alt="">
+        Chatbot Interface Project
+
+    </nav>
+    <div id="maindiv">
+        <div id="chatdiv">
+            <div class="container clearfix">
+                <div class="chat">
+                    <div class="chat-header clearfix">
+                        <img src="bot.png" height="45" alt="avatar" />
+
+                        <div class="chat-about">
+                            <div class="chat-with">Chat with SAM Bot</div>
+                            <div class="chat-num-messages">Your virtual friend</div>
+                        </div>
+                    </div> <!-- end chat-header -->
+
+                    <div class="chat-history">
+                        <ul style="list-style-type:none">
+                        </ul>
+
+                    </div> <!-- end chat-history -->
+
+                    <div class="chat-message clearfix">
+                        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+
+                        <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+                        <i class="fa fa-file-image-o"></i>
+
+                        <button>Send</button>
+
+                    </div> <!-- end chat-message -->
+
+                </div> <!-- end chat -->
+
+            </div> <!-- end container -->
+
+            <script id="message-template" type="text/x-handlebars-template">
+                <li class="clearfix">
+                    <div class="message-data align-right">
+                        <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
+                        <span class="message-data-name" >Me</span> <i class="fa fa-circle me"></i>
+                    </div>
+                    <div class="message other-message float-right">
+                        {{messageOutput}}
+                    </div>
+                </li>
+            </script>
+
+            <script id="message-response-template" type="text/x-handlebars-template">
+                <li>
+                    <div class="message-data">
+                        <span class="message-data-name"><i class="fa fa-circle online"></i>CB Bot</span>
+                        <span class="message-data-time">{{time}}, Today</span>
+                    </div>
+                    <div class="message my-message">
+                        {{{response}}}
+                    </div>
+                </li>
+            </script>
+
+        </div>
+        <div id="chatdiv2">
+            <span style="width: 100%; text-align: center; font-size: x-large; padding: 40px">
+                Hey there friends !<br>
+                <b>Send a simple hi message to begin</b>
+            </span>
+        </div>
+    </div>
+
+    <!--<div>-->
+        <!--<br>-->
+        <!--<button type="button" class="btn btn-danger" id="generate-graph">Get New Problem</button>-->
+        <!--<br>-->
+        <!--<button type="button" class="btn btn-success" id="solve">Solve</button>-->
+    <!--</div>-->
+</body>
+
+</html>
+
